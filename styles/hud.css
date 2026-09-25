@@ -140,6 +140,7 @@ body {
   --y: 85.768%;
   --w: 10.339%;
   --h: 15.356%;
+  container-type: size;
 }
 
 .nav-resume {
