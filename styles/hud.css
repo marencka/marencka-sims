@@ -41,6 +41,7 @@ body {
   z-index: 1;
   width: min(1180px, 100vw);
   aspect-ratio: 1180 / 267;
+  container-type: inline-size;
   font-family: var(--font);
 }
 
