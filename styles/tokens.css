@@ -1,0 +1,157 @@
+@font-face {
+  font-family: "Benguiat Gothic";
+  src: url("../assets/fonts/benguiat-gothic-book-bt.woff2") format("woff2"),
+    url("../assets/fonts/benguiat-gothic-book-bt.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Benguiat Gothic";
+  src: url("../assets/fonts/benguiat-gothic-bold-bt.woff2") format("woff2"),
+    url("../assets/fonts/benguiat-gothic-bold-bt.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --ui-900: #00035d;
+  --ui-850: #011749;
+  --ui-800: #0b1f65;
+  --ui-750: #162c88;
+  --ui-700: #2a3363;
+  --ui-650: #2f3b72;
+  --ui-600: #3a447a;
+  --ui-550: #3c4183;
+  --ui-500: #444c8b;
+  --ui-450: #4b5494;
+  --ui-400: #5a6699;
+  --ui-350: #6069b6;
+  --ui-340: #6471c2;
+  --ui-330: #656cb1;
+  --ui-320: #6676bf;
+  --ui-300: #838bd1;
+  --ui-280: #858fcd;
+  --ui-200: #9abef3;
+  --ui-150: #abc9f5;
+  --ui-100: #d8dbff;
+
+  --stroke: #444a73;
+
+  --plumbob: #9ffb89;
+  --plumbob-mid: #42d769;
+  --plumbob-deep: #12792f;
+  --bar-green-hi: #2bc944;
+  --bar-green-mid: #12792f;
+  --bar-green-lo: #085927;
+  --meter: #aaffff;
+  --meter-dim: #3a447a;
+
+  --pip-off-top: #fdfefe;
+  --pip-off-mid: #ccd5e0;
+  --pip-off-bot: #8e9cb2;
+  --pip-off-edge: rgba(62, 77, 107, .6);
+
+  --pip-lit-top: #d6feff;
+  --pip-lit-mid: #56e2ff;
+  --pip-lit-bot: #06a3c4;
+  --pip-lit-edge: rgba(6, 74, 100, .75);
+  --pip-glow: rgba(108, 233, 255, .8);
+
+  --pip-gloss: linear-gradient(180deg,
+      rgba(255, 255, 255, .95) 0%,
+      rgba(255, 255, 255, .40) 30%,
+      rgba(255, 255, 255, 0) 38%,
+      rgba(255, 255, 255, 0) 100%);
+  --want: #42d769;
+  --fear: #904949;
+  --gold: #c9b57f;
+  --warn: #fffc7c;
+
+  --motive-low: #904949;
+  --motive-mid: #c9b57f;
+  --motive-high: #42d769;
+
+  --tip-fill: #dac696;
+  --tip-edge: #00035d;
+  --tip-ink: #0b0b0b;
+
+  --notice-ink: #162c88;
+  --notice-edge: #0d1750;
+
+  --ink: #ffffff;
+  --ink-soft: #d8dbff;
+  --ink-label: #aaffff;
+  --ink-shadow: rgba(0, 3, 93, .85);
+
+  --panel-grad: linear-gradient(170deg, #858fcd 0%, #6676bf 100%);
+  --gloss-grad: linear-gradient(180deg,
+      rgba(255, 255, 255, .70) 4%,
+      rgba(255, 255, 255, .30) 11%,
+      rgba(255, 255, 255, 0) 100%);
+
+  --bevel-hi: inset 0 1px 0 rgba(255, 255, 255, .55);
+  --bevel-lo: inset 0 -1px 0 rgba(0, 0, 0, .35);
+  --bevel-stroke: inset 0 0 0 1px var(--stroke);
+  --bevel-drop: 0 0 3px rgba(0, 0, 0, .25);
+  --bevel: var(--bevel-hi), var(--bevel-lo), var(--bevel-stroke), var(--bevel-drop);
+
+  --r-panel: 12px;
+  --r-btn: 9px;
+  --r-tile: 7px;
+
+  --font: 'Roboto', system-ui, sans-serif;
+  --font-title: "Benguiat Gothic", var(--font);
+  --fs-label: 11px;
+  --fs-body: 14px;
+  --fs-title: 16px;
+  --font-title-color: #00035d;
+  --font-title-color-quiet: #ffffff;
+  --font-title-weight: 600;
+  --font-title-shadow:
+    0.8px 0.8px 0px rgba(255, 255, 255, 0.25),
+    inset -0.2px -0.2px 0px rgba(0, 0, 0, 0.5);
+
+  --z-pie: 60;
+  --z-dialog: 80;
+
+  --hud-h: 190px;
+  --gap: 8px;
+
+  --curs: url('/assets/cursors/sims2.cur'), auto;
+}
+
+.panel {
+  position: relative;
+  background: var(--panel-grad);
+  border-radius: var(--r-panel);
+  box-shadow: var(--bevel);
+  color: var(--ink);
+  font-family: var(--font);
+  text-shadow: 0 1px 1px var(--ink-shadow);
+}
+
+.panel::before {
+  content: "";
+  position: absolute;
+  inset: 1px 1px 55% 1px;
+  border-radius: calc(var(--r-panel) - 2px) calc(var(--r-panel) - 2px) 4px 4px;
+  background: var(--gloss-grad);
+  pointer-events: none;
+}
+
+body {
+  cursor: var(--curs);
+}
+
+a,
+button,
+[role="button"],
+input[type="submit"],
+input[type="button"],
+label,
+::after {
+  cursor: var(--curs);
+}

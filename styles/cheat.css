@@ -1,0 +1,85 @@
+.cheat {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 90;
+}
+
+.cheat__input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px 8px;
+  border: 0;
+  border-bottom: 1px solid #808080;
+  background: #fff;
+  color: #000;
+  font: 13px/1.4 "Lucida Console", Consolas, monospace;
+  text-shadow: none;
+  outline: 0;
+}
+
+.cheat__out {
+  margin: 0;
+  padding: 3px 8px;
+  background: #fff;
+  border-bottom: 1px solid #808080;
+  font: 12px/1.4 "Lucida Console", Consolas, monospace;
+  color: #000;
+  text-shadow: none;
+  display: none;
+}
+
+.cheat__out:not(:empty) {
+  display: block;
+}
+
+.cheat__out.is-error {
+  color: #b00000;
+}
+
+.simoleon__value {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 13px;
+  font-size: 13.12cqw;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: .01em;
+  transform: translateY(-3.34cqh);
+  color: var(--ui-900);
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, .1);
+  pointer-events: none;
+  user-select: none;
+}
+
+.r-simoleon.is-paid .simoleon__value {
+  animation: simoleon-paid 1.1s ease-out;
+}
+
+@keyframes simoleon-paid {
+  0% {
+    color: var(--plumbob-deep);
+    text-shadow: 0 0 10px var(--plumbob), 0 0 4px var(--plumbob);
+  }
+
+  60% {
+    color: var(--plumbob-deep);
+    text-shadow: 0 0 7px var(--plumbob), 0 0 3px var(--plumbob);
+  }
+
+  100% {
+    color: var(--ui-900);
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, .1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .r-simoleon.is-paid .simoleon__value {
+    animation: none;
+  }
+}

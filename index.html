@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Alexis Danz</title>
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/hud.css">
+  <link rel="stylesheet" href="styles/dialog.css">
+  <link rel="stylesheet" href="styles/tip.css">
+  <link rel="stylesheet" href="styles/notice.css">
+  <link rel="stylesheet" href="styles/pie.css">
+  <link rel="stylesheet" href="styles/cheat.css">
+  <link rel="stylesheet" href="styles/boot.css">
+  <link rel="icon" type="image/svg+xml" href="assets/tabs/tab-plumbob.svg">
+  <script>
+    window.__intro = (function () {
+      try {
+        if (new URLSearchParams(location.search).has("intro")) return "play";
+        return localStorage.getItem("marencka:intro@1") ? "skip" : "play";
+      } catch (e) { return "play"; }
+    })();
+    if (window.__intro === "skip") document.documentElement.dataset.intro = "seen";
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HZ7BPEZL1K"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-HZ7BPEZL1K");
+  </script>
+</head>
+
+<body>
+
+  <div class="boot" role="status" aria-label="Loading" aria-live="off">
+    <div class="boot__plumbob" aria-hidden="true">
+      <div class="boot__stage">
+        <div class="boot__spin">
+          <span class="boot__facet boot__facet--up"></span>
+          <span class="boot__facet boot__facet--up"></span>
+          <span class="boot__facet boot__facet--up"></span>
+          <span class="boot__facet boot__facet--up"></span>
+          <span class="boot__facet boot__facet--dn"></span>
+          <span class="boot__facet boot__facet--dn"></span>
+          <span class="boot__facet boot__facet--dn"></span>
+          <span class="boot__facet boot__facet--dn"></span>
+        </div>
+      </div>
+    </div>
+
+    <p class="boot__mark">marencka</p>
+
+    <div class="boot__meter">
+      <div class="boot__bar">
+        <div class="boot__fill"></div>
+      </div>
+      <span class="boot__pct">0%</span>
+    </div>
+
+    <p class="boot__status">Reticulating splines…</p>
+  </div>
+
+  <video class="scene" poster="assets/poster.jpg" autoplay muted loop playsinline preload="auto"
+    aria-hidden="true"></video>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <filter id="f-crest" color-interpolation-filters="sRGB">
+        <feComponentTransfer>
+          <feFuncR type="table"
+            tableValues="0.0471 0.0471 0.0849 0.1261 0.1674 0.2086 0.2498 0.2911 0.3323 0.3735 0.4148 0.456 0.4972 0.5385 0.5797 0.6209 0.6235 0.6235 0.6235 0.6235 0.6235 0.6235 0.6235 0.6235" />
+          <feFuncG type="table"
+            tableValues="0.1333 0.1333 0.1333 0.1333 0.1962 0.2636 0.331 0.3984 0.4658 0.5332 0.6006 0.668 0.7354 0.8028 0.8701 0.9375 0.9843 0.9843 0.9843 0.9843 0.9843 0.9843 0.9843 0.9843" />
+          <feFuncB type="table"
+            tableValues="0.4039 0.4039 0.4039 0.4039 0.4039 0.4039 0.4039 0.4039 0.4039 0.4039 0.4136 0.4273 0.441 0.4547 0.4684 0.4821 0.4958 0.5095 0.5231 0.5368 0.5373 0.5373 0.5373 0.5373" />
+        </feComponentTransfer>
+      </filter>
+      <symbol id="i-code" viewBox="0 0 24 24">
+        <path d="M9.4 16.6 4.8 12l4.6-4.6L8 6l-6 6 6 6zm5.2 0 4.6-4.6-4.6-4.6L16 6l6 6-6 6z" />
+      </symbol>
+      <symbol id="i-resume" viewBox="0 0 24 24">
+        <path d="M6 2h8l5 5v15H6zm7 1.5V8h4.5zM8 12h8v1.6H8zm0 3.2h8v1.6H8zm0-6.4h3v1.6H8z" />
+      </symbol>
+      <symbol id="i-folder" viewBox="0 0 24 24">
+        <path d="M3 5h6l2 2h10v12H3z" />
+      </symbol>
+      <symbol id="i-person" viewBox="0 0 24 24">
+        <path d="M12 12a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9zm0 2c-4 0-8 2-8 4.5V21h16v-2.5c0-2.5-4-4.5-8-4.5z" />
+      </symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24">
+        <path d="M3 5h18v14H3zm2 2v.4l7 4.4 7-4.4V7z" />
+      </symbol>
+      <symbol id="i-floppy" viewBox="0 0 24 24">
+        <path d="M4 3h13l3 3v15H4zm4 1v5h7V4zm-1 9h10v7H7z" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <div class="hud" data-tab="motives">
+
+    <div class="region r-midPanel art art--mid" aria-hidden="true"></div>
+    <div class="region r-rightPanel art art--right" aria-hidden="true"></div>
+
+    <div class="region r-dial art art--dial" aria-hidden="true"></div>
+    <div class="region r-camera art art--camera" aria-hidden="true"></div>
+    <div class="region r-walls art art--walls" aria-hidden="true"></div>
+    <div class="region r-floorToggle art art--floor" aria-hidden="true"></div>
+    <div class="region r-simoleon art art--simoleon" data-tip="Simoleons">
+      <span class="simoleon__value" id="funds"></span>
+    </div>
+
+    <nav class="nav" aria-label="Site sections">
+      <button class="navbtn nav-resume" data-primary data-nav="resume" type="button" data-tip="Résumé">
+        <svg aria-hidden="true">
+          <use href="#i-resume"></use>
+        </svg><span class="sr">Résumé</span>
+      </button>
+      <button class="navbtn nav-projects" data-nav="projects" type="button" data-tip="Projects">
+        <svg aria-hidden="true">
+          <use href="#i-folder"></use>
+        </svg><span class="sr">Projects</span>
+      </button>
+      <button class="navbtn nav-about" data-nav="about" type="button" data-tip="About me">
+        <svg aria-hidden="true">
+          <use href="#i-person"></use>
+        </svg><span class="sr">About</span>
+      </button>
+      <button class="navbtn nav-contact" data-nav="contact" type="button" data-tip="Contact"
+        data-tip-sub="Email, LinkedIn, GitHub">
+        <svg aria-hidden="true">
+          <use href="#i-mail"></use>
+        </svg><span class="sr">Contact</span>
+      </button>
+      <button class="navbtn nav-archive" data-nav="archive" type="button" data-tip="Previous site"
+        data-tip-sub="My old Windows 98 themed personal website">
+        <svg aria-hidden="true">
+          <use href="#i-floppy"></use>
+        </svg><span class="sr">The 2021 site</span>
+      </button>
+      <button class="navbtn nav-source" data-nav="source" type="button" data-tip="Source"
+        data-tip-sub="Who made the art, and how this was built">
+        <svg aria-hidden="true">
+          <use href="#i-code"></use>
+        </svg><span class="sr">Source</span>
+      </button>
+    </nav>
+
+    <div class="region r-portraitWell" aria-hidden="true"></div>
+    <div class="region r-portrait portrait" data-tip="Alexis Danz"><img src="assets/portrait.png" alt="Alexis portrait">
+    </div>
+    <div class="region r-thermo" data-tip="Mood" data-tip-sub="Comfortable" aria-hidden="true"></div>
+
+    <div class="region r-age age" data-tip="Age"><img src="assets/age.png" alt="Alexis age"></div>
+    <div class=" region r-clock" data-tip="Sim time" data-tip-sub="Running at normal speed">
+      <div class="clock__time" id="clock">Mon 8:12 am</div>
+    </div>
+
+    <div class="region r-simGlyph" aria-hidden="true"></div>
+    <div class="region r-vbarM vbar" aria-hidden="true"></div>
+    <div class="region r-vbarR vbar" aria-hidden="true"></div>
+
+    <div class="region r-wantsLabel aspire-label">Wants</div>
+    <div class="region r-wantsBar">
+      <div class="tiles" id="wants" aria-label="Wants"></div>
+    </div>
+    <div class="region r-fearsLabel aspire-label">Fears</div>
+    <div class="region r-fearBar">
+      <div class="tiles" id="fears" aria-label="Fears"></div>
+    </div>
+
+    <div class="region r-tabwell" aria-hidden="true"></div>
+    <div class="tabs" role="tablist" aria-label="Sim panel">
+      <button class="tab tab-motives" role="tab" type="button" data-tab="motives" aria-selected="true"
+        aria-controls="panel-body" data-tip="Motives"><span class="sr">Motives</span></button>
+      <button class="tab tab-career" role="tab" type="button" data-tab="career" aria-selected="false"
+        aria-controls="panel-body" data-tip="Career"></button>
+      <button class="tab tab-skills" role="tab" type="button" data-tab="skills" aria-selected="false"
+        aria-controls="panel-body" data-tip="Skills & Personality"><span class="sr">Skills & Personality</span></button>
+    </div>
+
+    <div class="region r-moodBar mood" aria-label="Mood meter" data-tip="Mood meter"></div>
+
+    <div class="region r-panelHead panelhead" id="panel-head"></div>
+    <div class="region r-panelBody" id="panel-body" role="tabpanel" tabindex="0"></div>
+
+  </div>
+
+  <script type="module" src="scripts/boot.js"></script>
+  <script type="module" src="scripts/scene.js"></script>
+  <script type="module" src="scripts/hud.js"></script>
+  <script type="module" src="scripts/router.js"></script>
+  <script type="module" src="scripts/tip.js"></script>
+  <script type="module" src="scripts/notice.js"></script>
+  <script type="module" src="scripts/pie.js"></script>
+  <script type="module" src="scripts/cheat.js"></script>
+</body>
+
+</html>

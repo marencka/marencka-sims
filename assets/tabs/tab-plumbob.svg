@@ -1,0 +1,33 @@
+<svg width="20" height="36" viewBox="0 0 20 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+<g id="SimDesktop - InGame">
+
+<g id="PlumbobActice">
+<g id="rect7567" filter="url(#filter0_d_0_1)">
+<path d="M9.63012 4L15.6794 17.8131L10.0489 31.3836L4 17.5707L9.63012 4Z" fill="url(#paint0_radial_0_1)"/>
+<path d="M9.62012 3C10.0207 2.99609 10.3851 3.23173 10.5459 3.59863L16.5957 17.4121C16.7048 17.6615 16.7078 17.9448 16.6035 18.1963L10.9727 31.7666C10.8191 32.1367 10.4593 32.3799 10.0586 32.3838C9.65805 32.3877 9.29361 32.152 9.13281 31.7852L3.08398 17.9717C2.97478 17.7222 2.97185 17.439 3.07617 17.1875L8.70605 3.61719C8.85958 3.24714 9.21953 3.00401 9.62012 3Z" stroke="#040E6D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path id="Union" fill-rule="evenodd" clip-rule="evenodd" d="M9.87875 3.97247C9.86354 3.83524 9.73997 3.73632 9.60274 3.75153C9.4655 3.76673 9.36658 3.89031 9.38179 4.02754L11.1274 19.7811L4.08202 17.3345C3.95159 17.2892 3.80914 17.3582 3.76384 17.4886C3.71855 17.6191 3.78756 17.7615 3.91799 17.8068L11.3331 20.3818C11.3684 20.3948 11.4071 20.4001 11.4471 20.3957C11.4837 20.3916 11.5177 20.3798 11.5474 20.362L15.7995 18.0323C15.9206 17.966 15.965 17.814 15.8986 17.6929C15.8323 17.5719 15.6803 17.5275 15.5593 17.5938L11.6269 19.7484L9.87875 3.97247Z" fill="url(#paint1_radial_0_1)"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_d_0_1" x="0" y="0" width="19.6794" height="35.3836" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.0156863 0 0 0 0 0.054902 0 0 0 0 0.427451 0 0 0 1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape"/>
+</filter>
+<radialGradient id="paint0_radial_0_1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(11.25 19.75) rotate(96.9121) scale(11.7188 4.99817)">
+<stop offset="0.0578477" stop-color="#BCFF87"/>
+<stop offset="1" stop-color="#17E31D"/>
+</radialGradient>
+<radialGradient id="paint1_radial_0_1" cx="0" cy="0" r="1" gradientTransform="matrix(1.13442 -10.2255 7.48125 0.832536 11.4072 19.9404)" gradientUnits="userSpaceOnUse">
+<stop stop-color="#040E6D"/>
+<stop offset="1" stop-color="#06106E" stop-opacity="0.1"/>
+</radialGradient>
+</defs>
+</svg>
