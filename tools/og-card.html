@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>og card source</title>
+  <!-- Source for assets/og.png. Reuses the site's real boot screen so the
+       plumbob in a link preview is the same one the site loads with.
+       Render with tools/build-og.sh — do not hand-edit the PNG. -->
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="../styles/boot.css">
+  <style>
+    body {
+      position: relative;
+    }
+
+    html,
+    body {
+      width: 1200px;
+      height: 630px;
+      margin: 0;
+      overflow: hidden;
+      background: var(--ui-900);
+    }
+
+    /* Freeze the bob and the meter sheen so every render is identical. */
+    *,
+    *::before,
+    *::after {
+      animation: none !important;
+      transition: none !important;
+    }
+
+    /* Scale the boot screen up for a 1200x630 card. */
+    /* Anchor to the body box, not the viewport Chrome decides to give us. */
+    .boot {
+      position: absolute;
+      inset: 0;
+      gap: 34px;
+    }
+
+    .boot__plumbob {
+      --u: 6.2px;
+    }
+
+    .boot__mark {
+      font-size: 54px;
+    }
+
+    .boot__meter {
+      width: 560px;
+      gap: 18px;
+    }
+
+    .boot__bar {
+      height: 22px;
+      border-radius: 12px;
+      padding: 3px;
+    }
+
+    .boot__fill {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .boot__pct,
+    .boot__status {
+      font-size: 22px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="boot">
+    <div class="boot__plumbob">
+      <div class="boot__stage">
+        <div class="boot__spin">
+          <span class="boot__facet boot__facet--up"></span>
+          <span class="boot__facet boot__facet--up"></span>
+          <span class="boot__facet boot__facet--up"></span>
+          <span class="boot__facet boot__facet--up"></span>
+          <span class="boot__facet boot__facet--dn"></span>
+          <span class="boot__facet boot__facet--dn"></span>
+          <span class="boot__facet boot__facet--dn"></span>
+          <span class="boot__facet boot__facet--dn"></span>
+        </div>
+      </div>
+    </div>
+
+    <p class="boot__mark">marencka</p>
+
+    <div class="boot__meter">
+      <div class="boot__bar">
+        <div class="boot__fill"></div>
+      </div>
+      <span class="boot__pct">100%</span>
+    </div>
+
+    <p class="boot__status">Reticulating splines&hellip;</p>
+  </div>
+
+</body>
+
+</html>

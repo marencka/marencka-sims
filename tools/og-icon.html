@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>touch icon source</title>
+  <!-- Source for assets/apple-touch-icon.png (iOS home screen).
+       Rendered at 512 and downscaled to 180 by the build script.
+       Render with tools/build-og.sh. -->
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="../styles/boot.css">
+  <style>
+    body {
+      position: relative;
+    }
+
+    html,
+    body {
+      width: 512px;
+      height: 512px;
+      margin: 0;
+      overflow: hidden;
+      background: var(--ui-900);
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation: none !important;
+      transition: none !important;
+    }
+
+    /* Centre on the icon itself rather than on the viewport, so the render
+       does not depend on the window size Chrome was given. */
+    .boot {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      padding: 0;
+      background:
+        radial-gradient(120% 100% at 50% 44%, rgba(58, 68, 122, .75), transparent 72%),
+        linear-gradient(180deg, var(--ui-850) 0%, var(--ui-900) 100%);
+    }
+
+    .boot::before {
+      opacity: .12;
+    }
+
+    .boot__plumbob {
+      --u: 8.6px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="boot">
+    <div class="boot__plumbob">
+      <div class="boot__stage">
+        <div class="boot__spin">
+          <span class="boot__facet boot__facet--up"></span>
+          <span class="boot__facet boot__facet--up"></span>
+          <span class="boot__facet boot__facet--up"></span>
+          <span class="boot__facet boot__facet--up"></span>
+          <span class="boot__facet boot__facet--dn"></span>
+          <span class="boot__facet boot__facet--dn"></span>
+          <span class="boot__facet boot__facet--dn"></span>
+          <span class="boot__facet boot__facet--dn"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
